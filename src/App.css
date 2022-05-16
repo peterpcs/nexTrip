@@ -1,0 +1,987 @@
+.App {
+    text-align: center;
+    color: #626462;
+}
+
+.App-header {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(2vmin);
+    color: white;
+    position: relative;
+    background-image: url('./assets/nextrip.jpeg');
+    background-size: cover;
+    background-position: 90%;
+    background-repeat: no-repeat;
+}
+
+.nextTrip_title {
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
+    background-color: #fff;
+    color: #8a8b8a;
+    opacity: 0.9;
+    margin-bottom: 0;
+    padding: 1rem;
+    width: auto;
+}
+
+.nextrip-tab {
+    background-color: #dbf4fd;
+    color: #047db5;
+    padding: 0.75rem 1.75rem;
+    font-size: 18px !important;
+    font-size: 1.125rem !important;
+    font-weight: 510;
+    position: relative;
+    text-decoration: none;
+    height: 60px;
+}
+
+@media (min-width: 768px) {
+    .nextrip-tab {
+        padding: 1rem 2rem;
+        font-size: 22px !important;
+        font-size: 1.375rem !important;
+    }
+}
+
+.nextrip-tab:hover {
+    border-bottom: none;
+}
+
+.nextrip-tab.active {
+    background-color: #0097d0 !important;
+    color: #fff !important;
+}
+
+.nextrip-tab.active::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-top: 8px solid #0097d0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    left: 45%;
+    bottom: -7px;
+}
+
+.blink {
+    -webkit-animation: fadein 2s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadeIn 1s infinite alternate;
+    /* Firefox < 16 */
+    -ms-animation: fadeIn 1s infinite alternate;
+    /* Internet Explorer */
+    -o-animation: fadeIn 1s infinite alternate;
+    /* Opera < 12.1 */
+    animation: fadeIn 1s infinite alternate;
+    width: 0.75rem;
+    height: 0.75rem;
+    margin: 0 5px 5px;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Firefox < 16 */
+
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Safari, Chrome and Opera > 12.1 */
+
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Internet Explorer */
+
+@-ms-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Opera < 12.1 */
+
+@-o-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.stop-number {
+    font-size: 1.25rem;
+}
+
+@media (min-width: 768px) {
+    main {
+        width: 770px;
+        margin: 0 auto;
+    }
+    header {
+        height: 240px;
+    }
+}
+
+@media (min-width: 992px) {
+    main {
+        width: 960px !important;
+    }
+    header {
+        height: 275px;
+    }
+}
+
+@media (min-width: 1200px) {
+    main {
+        width: 1140px !important;
+    }
+    header {
+        height: 320px;
+    }
+    .nextTrip_title {
+        left: 120px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .nextTrip_title {
+        left: 150px;
+    }
+    header {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+.nextrip-departures .card {
+    background-color: #f5f5f4 !important;
+    padding: 1rem 0 0 0 !important;
+}
+
+.nextrip-departures .card .stop-description {
+    display: -webkit-box;
+    display: flex;
+}
+
+.nextrip-departures .card .stop-description .stop-name,
+.nextrip-departures .card .stop-description .stop-number,
+.nextrip-departures .card .stop-description .fail-text {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+}
+
+@media (min-width: 992px) {
+    .nextrip-departures .card .stop-description .stop-name,
+    .nextrip-departures .card .stop-description .stop-number,
+    .nextrip-departures .card .stop-description .fail-text {
+        padding-right: 1.5rem !important;
+        padding-left: 1.5rem !important;
+    }
+}
+
+.nextrip-departures .card .stop-description .stop-number {
+    margin-left: auto;
+    text-align: right;
+}
+
+.nextrip-departures .card table.departures-table {
+    margin-bottom: 0.5rem;
+}
+
+.nextrip-departures .card table.departures-table caption {
+    caption-side: top;
+    padding-bottom: 0;
+}
+
+.nextrip-departures .card table.departures-table thead tr th {
+    background-color: #ffd200;
+    border-top: none;
+    border-bottom: none;
+    text-transform: uppercase;
+    letter-spacing: 1.28px;
+}
+
+.nextrip-departures .card table.departures-table thead tr th:first-child {
+    padding-left: 1rem !important;
+}
+
+@media (min-width: 992px) {
+    .nextrip-departures .card table.departures-table thead tr th:first-child {
+        padding-left: 1.5rem !important;
+    }
+}
+
+.nextrip-departures .card table.departures-table thead tr th:last-child {
+    padding-right: 1rem !important;
+}
+
+@media (min-width: 992px) {
+    .nextrip-departures .card table.departures-table thead tr th:last-child {
+        padding-right: 1.5rem !important;
+    }
+}
+
+.nextrip-departures .card table.departures-table thead tr th .route {
+    width: 50px;
+}
+
+.nextrip-departures .card table.departures-table thead tr th .destination {
+    max-width: 218px;
+}
+
+@media (min-width: 768px) {
+    .nextrip-departures .card table.departures-table thead tr th .destination {
+        max-width: 593px;
+    }
+}
+
+@media (min-width: 992px) {
+    .nextrip-departures .card table.departures-table thead tr th .destination {
+        max-width: 807px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .nextrip-departures .card table.departures-table thead tr th .destination {
+        width: 805px;
+    }
+}
+
+.nextrip-departures .card table.departures-table thead tr th .departs {
+    margin-left: auto;
+}
+
+.nextrip-departures .card table.departures-table tbody tr.departure {
+    border-bottom: 1px solid #8a8b8a;
+}
+
+.nextrip-departures .card table.departures-table tbody tr.departure:nth-child(n+4) {
+    display: none !important;
+}
+
+.nextrip-departures .card table.departures-table tbody tr.departure td {
+    margin-bottom: -0.8px !important;
+    border: none;
+}
+
+@media (min-width: 992px) {
+    .nextrip-departures .card table.departures-table tbody tr.departure td {
+        font-size: 23px !important;
+        font-size: 1.4375rem !important;
+    }
+}
+
+.nextrip-departures .card table.departures-table tbody tr.departure td:first-child {
+    font-weight: 700;
+    padding-left: 1rem !important;
+}
+
+@media (min-width: 992px) {
+    .nextrip-departures .card table.departures-table tbody tr.departure td:first-child {
+        padding-left: 1.5rem !important;
+    }
+}
+
+.nextrip-departures .card table.departures-table tbody tr.departure td:last-child {
+    font-weight: 700;
+    padding-right: 1rem !important;
+}
+
+@media (min-width: 992px) {
+    .nextrip-departures .card table.departures-table tbody tr.departure td:last-child {
+        padding-right: 1.5rem !important;
+    }
+}
+
+.nextrip-departures .card table.departures-table tbody tr.departure td.route-number {
+    width: 50px;
+}
+
+@media (min-width: 992px) {
+    .nextrip-departures .card table.departures-table tbody tr.departure td.route-number {
+        width: 140px;
+    }
+}
+
+.nextrip-departures .card table.departures-table tbody tr.departure td.route-name {
+    max-width: 150px;
+}
+
+@media (min-width: 768px) {
+    .nextrip-departures .card table.departures-table tbody tr.departure td.route-name {
+        max-width: 593px;
+    }
+}
+
+@media (min-width: 992px) {
+    .nextrip-departures .card table.departures-table tbody tr.departure td.route-name {
+        width: 670px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .nextrip-departures .card table.departures-table tbody tr.departure td.route-name {
+        width: 845px;
+    }
+}
+
+.nextrip-departures .card table.departures-table tbody tr.departure td.depart-time {
+    font-weight: 700;
+}
+
+.nextrip-departures .card table.departures-table tbody tr.departure td span.red {
+    position: relative;
+}
+
+.nextrip-departures .card table.departures-table tbody tr.departure td span.red::before {
+    display: inline-block;
+    position: absolute;
+    top: 0.2rem;
+    left: -1rem;
+    content: '';
+    /* background-image: url("../../../../../img/svg/cancel-red.svg"); */
+    background-repeat: no-repeat;
+    background-size: 0.75rem;
+    width: 0.75rem;
+    height: 0.75rem;
+}
+
+@media (min-width: 992px) {
+    .nextrip-departures .card table.departures-table tbody tr.departure td span.red::before {
+        top: 0.2rem;
+        left: -2rem;
+        background-size: 1.25rem;
+        width: 1.251rem;
+        height: 1.25rem;
+        margin-left: 5px;
+    }
+}
+
+.nextrip-departures .card table.departures-table tbody tr td:last-child {
+    text-align: right;
+}
+
+.nextrip-departures .card table.departures-table tbody tr td.stop-closed-msg,
+.nextrip-departures .card table.departures-table tbody tr td.stop-closed-msg:last-child {
+    padding-left: 1rem !important;
+    text-align: left;
+}
+
+@media (min-width: 992px) {
+    .nextrip-departures .card table.departures-table tbody tr td.stop-closed-msg,
+    .nextrip-departures .card table.departures-table tbody tr td.stop-closed-msg:last-child {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+        padding-left: 1.5rem !important;
+    }
+}
+
+.nextrip-departures .card table.departures-table tbody tr td.stop-closed-msg span.h3,
+.nextrip-departures .card table.departures-table tbody tr td.stop-closed-msg:last-child span.h3 {
+    position: relative;
+    padding-left: 2.5rem;
+}
+
+@media (min-width: 992px) {
+    .nextrip-departures .card table.departures-table tbody tr td.stop-closed-msg span.h3,
+    .nextrip-departures .card table.departures-table tbody tr td.stop-closed-msg:last-child span.h3 {
+        padding-left: 3.5rem;
+    }
+}
+
+.nextrip-departures .card table.departures-table tbody tr td.stop-closed-msg span.h3::before,
+.nextrip-departures .card table.departures-table tbody tr td.stop-closed-msg:last-child span.h3::before {
+    display: inline-block;
+    position: absolute;
+    top: -0.15rem;
+    left: 0;
+    content: '';
+    /* background-image: url("../../../../../img/svg/circle-times-gray.svg"); */
+    background-repeat: no-repeat;
+    background-size: 1.75rem;
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+@media (min-width: 992px) {
+    .nextrip-departures .card table.departures-table tbody tr td.stop-closed-msg span.h3::before,
+    .nextrip-departures .card table.departures-table tbody tr td.stop-closed-msg:last-child span.h3::before {
+        top: -0.35rem;
+        background-size: 2.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+.nextrip-departures .card table.departures-table tbody tr td.no-departures-msg:last-child {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+    text-align: left;
+}
+
+@media (min-width: 992px) {
+    .nextrip-departures .card table.departures-table tbody tr td.no-departures-msg:last-child {
+        padding-right: 1.5rem !important;
+        padding-left: 1.5rem !important;
+    }
+}
+
+.nextrip-departures .card .btn-toggle {
+    text-align: left;
+    width: 250px;
+    margin: 0;
+    margin-bottom: 1rem;
+    padding: 0 !important;
+    padding-left: 1rem !important;
+}
+
+@media (min-width: 992px) {
+    .nextrip-departures .card .btn-toggle {
+        padding-left: 1.5rem !important;
+    }
+}
+
+.nextrip-departures .card .show {
+    cursor: pointer;
+    padding-top: 1rem;
+    position: relative;
+}
+
+.nextrip-departures .card .show.more {
+    display: none;
+}
+
+.nextrip-departures .card .show.more::before {
+    content: '';
+    /* background-image: url("../../../../../img/svg/circle-plus-blue.svg"); */
+    background-repeat: no-repeat;
+    background-size: 1.25rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    position: absolute;
+    top: 0.3rem;
+    left: 1rem;
+}
+
+@media (min-width: 992px) {
+    .nextrip-departures .card .show.more::before {
+        top: 0.5rem;
+        left: 1.5rem;
+    }
+}
+
+.nextrip-departures .card .show.less {
+    display: none;
+}
+
+.nextrip-departures .card .show.less::before {
+    content: '';
+    /* background-image: url("../../../../../img/svg/circle-minus-blue.svg"); */
+    background-repeat: no-repeat;
+    background-size: 1.25rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    position: absolute;
+    top: 0.3rem;
+    left: 1rem;
+}
+
+@media (min-width: 992px) {
+    .nextrip-departures .card .show.less::before {
+        top: 0.5rem;
+        left: 1.5rem;
+    }
+}
+
+.nextrip-departures .card .show .h4 {
+    position: relative;
+    color: #626462;
+    line-height: 1.5;
+    margin-left: 1.75rem;
+}
+
+.nextrip-departures .card .show .icon {
+    position: absolute;
+    top: 0.35rem;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+@media (min-width: 992px) {
+    .nextrip-departures .card .show .icon {
+        top: 0.5rem;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+ch1,
+h2,
+h3,
+h4,
+.h1,
+.h2,
+.h3,
+.h4 {
+    font-weight: 700 !important;
+    margin-bottom: 0;
+}
+
+h1,
+.h1 {
+    font-size: 32px !important;
+    font-size: 2rem !important;
+}
+
+@media (min-width: 992px) {
+    h1,
+    .h1 {
+        font-size: 42px !important;
+        font-size: 2.625rem !important;
+    }
+}
+
+h1>.page-title,
+.h1>.page-title {
+    background-color: #047db5;
+}
+
+h2,
+.h2 {
+    font-size: 23px !important;
+    font-size: 1.4375rem !important;
+}
+
+@media (min-width: 992px) {
+    h2,
+    .h2 {
+        font-size: 32px !important;
+        font-size: 2rem !important;
+    }
+}
+
+h3,
+.h3 {
+    font-size: 18px !important;
+    font-size: 1.125rem !important;
+}
+
+@media (min-width: 992px) {
+    h3,
+    .h3 {
+        font-size: 23px !important;
+        font-size: 1.4375rem !important;
+    }
+}
+
+h4,
+.h4 {
+    font-size: 16px !important;
+    font-size: 1rem !important;
+}
+
+@media (min-width: 992px) {
+    h4,
+    .h4 {
+        font-size: 18px !important;
+        font-size: 1.125rem !important;
+    }
+}
+
+hr {
+    border-top: 1px solid #e3e3e0;
+    margin: 15px 0;
+}
+
+@media (min-width: 992px) {
+    hr {
+        margin: 30px 0;
+    }
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #626462;
+}
+
+.table th,
+.table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #e3e3e0;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #e3e3e0;
+}
+
+.table tbody+tbody {
+    border-top: 2px solid #e3e3e0;
+}
+
+.table-sm th,
+.table-sm td {
+    padding: 0.3rem;
+}
+
+.table-bordered {
+    border: 1px solid #e3e3e0;
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #e3e3e0;
+}
+
+.table-bordered thead th,
+.table-bordered thead td {
+    border-bottom-width: 2px;
+}
+
+.table-borderless th,
+.table-borderless td,
+.table-borderless thead th,
+.table-borderless tbody+tbody {
+    border: 0;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table-hover tbody tr:hover {
+    color: #626462;
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+.table-primary,
+.table-primary>th,
+.table-primary>td {
+    background-color: #b8e2f2;
+}
+
+.table-primary th,
+.table-primary td,
+.table-primary thead th,
+.table-primary tbody+tbody {
+    border-color: #7ac9e7;
+}
+
+.table-hover .table-primary:hover {
+    background-color: #a2d9ee;
+}
+
+.table-hover .table-primary:hover>td,
+.table-hover .table-primary:hover>th {
+    background-color: #a2d9ee;
+}
+
+.table-secondary,
+.table-secondary>th,
+.table-secondary>td {
+    background-color: #b9dbea;
+}
+
+.table-secondary th,
+.table-secondary td,
+.table-secondary thead th,
+.table-secondary tbody+tbody {
+    border-color: #7cbbd9;
+}
+
+.table-hover .table-secondary:hover {
+    background-color: #a5d1e4;
+}
+
+.table-hover .table-secondary:hover>td,
+.table-hover .table-secondary:hover>th {
+    background-color: #a5d1e4;
+}
+
+.table-success,
+.table-success>th,
+.table-success>td {
+    background-color: #e6f2cd;
+}
+
+.table-success th,
+.table-success td,
+.table-success thead th,
+.table-success tbody+tbody {
+    border-color: #d0e6a2;
+}
+
+.table-hover .table-success:hover {
+    background-color: #dcedb9;
+}
+
+.table-hover .table-success:hover>td,
+.table-hover .table-success:hover>th {
+    background-color: #dcedb9;
+}
+
+.table-info,
+.table-info>th,
+.table-info>td {
+    background-color: #b8e2f2;
+}
+
+.table-info th,
+.table-info td,
+.table-info thead th,
+.table-info tbody+tbody {
+    border-color: #7ac9e7;
+}
+
+.table-hover .table-info:hover {
+    background-color: #a2d9ee;
+}
+
+.table-hover .table-info:hover>td,
+.table-hover .table-info:hover>th {
+    background-color: #a2d9ee;
+}
+
+.table-warning,
+.table-warning>th,
+.table-warning>td {
+    background-color: #fff2b8;
+}
+
+.table-warning th,
+.table-warning td,
+.table-warning thead th,
+.table-warning tbody+tbody {
+    border-color: #ffe87a;
+}
+
+.table-hover .table-warning:hover {
+    background-color: #ffed9f;
+}
+
+.table-hover .table-warning:hover>td,
+.table-hover .table-warning:hover>th {
+    background-color: #ffed9f;
+}
+
+.table-danger,
+.table-danger>th,
+.table-danger>td {
+    background-color: #fabfc4;
+}
+
+.table-danger th,
+.table-danger td,
+.table-danger thead th,
+.table-danger tbody+tbody {
+    border-color: #f68892;
+}
+
+.table-hover .table-danger:hover {
+    background-color: #f8a7ae;
+}
+
+.table-hover .table-danger:hover>td,
+.table-hover .table-danger:hover>th {
+    background-color: #f8a7ae;
+}
+
+.table-light,
+.table-light>th,
+.table-light>td {
+    background-color: #fcfcfc;
+}
+
+.table-light th,
+.table-light td,
+.table-light thead th,
+.table-light tbody+tbody {
+    border-color: #fafaf9;
+}
+
+.table-hover .table-light:hover {
+    background-color: #efefef;
+}
+
+.table-hover .table-light:hover>td,
+.table-hover .table-light:hover>th {
+    background-color: #efefef;
+}
+
+.table-dark,
+.table-dark>th,
+.table-dark>td {
+    background-color: #c6c8ca;
+}
+
+.table-dark th,
+.table-dark td,
+.table-dark thead th,
+.table-dark tbody+tbody {
+    border-color: #95999c;
+}
+
+.table-hover .table-dark:hover {
+    background-color: #b9bbbe;
+}
+
+.table-hover .table-dark:hover>td,
+.table-hover .table-dark:hover>th {
+    background-color: #b9bbbe;
+}
+
+.table-active,
+.table-active>th,
+.table-active>td {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+.table-hover .table-active:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+.table-hover .table-active:hover>td,
+.table-hover .table-active:hover>th {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+.table .thead-dark th {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #454d55;
+}
+
+.table .thead-light th {
+    color: #343a40;
+    background-color: #e3e3e0;
+    border-color: #e3e3e0;
+}
+
+.table-dark {
+    color: #fff;
+    background-color: #343a40;
+}
+
+.table-dark th,
+.table-dark td,
+.table-dark thead th {
+    border-color: #454d55;
+}
+
+.table-dark.table-bordered {
+    border: 0;
+}
+
+.table-dark.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.table-dark.table-hover tbody tr:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.075);
+}
+
+@media (max-width: 575.98px) {
+    .table-responsive-sm {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .table-responsive-sm>.table-bordered {
+        border: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .table-responsive-md {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .table-responsive-md>.table-bordered {
+        border: 0;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .table-responsive-lg {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .table-responsive-lg>.table-bordered {
+        border: 0;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .table-responsive-xl {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .table-responsive-xl>.table-bordered {
+        border: 0;
+    }
+}
+
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive>.table-bordered {
+    border: 0;
+}

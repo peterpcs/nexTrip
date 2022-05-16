@@ -1,0 +1,324 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders departures correctly 1`] = `
+<div
+  className="nextrip-departures"
+  id="nextripDepartures"
+>
+  <div
+    className="card mb-3 p-3 p-md-3"
+  >
+    <div
+      className="stop-description mb-3"
+    >
+      <h3
+        className="h2 stop-name"
+      >
+        MOA Transit Station
+      </h3>
+      <span
+        className="stop-number"
+      >
+        <strong>
+          Stop #: 
+        </strong>
+        51405
+      </span>
+    </div>
+    <div
+      className="stop-departures"
+    >
+      <table
+        className="table departures-table"
+      >
+        <thead>
+          <tr>
+            <th
+              className="route"
+            >
+              Route
+            </th>
+            <th
+              className="destination"
+            >
+              Destination
+            </th>
+            <th
+              className="departs text-right"
+            >
+              Departs
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            className="departure"
+            style={
+              Object {
+                "display": "table-row",
+              }
+            }
+          >
+            <td
+              className="route-number mr-2"
+            >
+              Blue
+            </td>
+            <td
+              className="route-name"
+            >
+              to Mpls-Target Field
+            </td>
+            <td
+              className="depart-time ml-auto"
+            >
+              <img
+                alt="broadcast icon"
+                className="icon blink mr-1"
+                src="broadcast-blue.svg"
+              />
+              <span>
+                11 Min
+              </span>
+            </td>
+          </tr>
+          <tr
+            className="departure"
+            style={
+              Object {
+                "display": "table-row",
+              }
+            }
+          >
+            <td
+              className="route-number mr-2"
+            >
+              Blue
+            </td>
+            <td
+              className="route-name"
+            >
+              to Mpls-Target Field
+            </td>
+            <td
+              className="depart-time ml-auto"
+            >
+              <span>
+                1:32
+              </span>
+            </td>
+          </tr>
+          <tr
+            className="departure"
+            style={
+              Object {
+                "display": "table-row",
+              }
+            }
+          >
+            <td
+              className="route-number mr-2"
+            >
+              Blue
+            </td>
+            <td
+              className="route-name"
+            >
+              to Mpls-Target Field
+            </td>
+            <td
+              className="depart-time ml-auto"
+            >
+              <span>
+                1:44
+              </span>
+            </td>
+          </tr>
+          <tr
+            className="departure"
+            style={
+              Object {
+                "display": "table-row",
+              }
+            }
+          >
+            <td
+              className="route-number mr-2"
+            >
+              Blue
+            </td>
+            <td
+              className="route-name"
+            >
+              to Mpls-Target Field
+            </td>
+            <td
+              className="depart-time ml-auto"
+            >
+              <span>
+                1:56
+              </span>
+            </td>
+          </tr>
+          <tr
+            className="departure"
+            style={
+              Object {
+                "display": "table-row",
+              }
+            }
+          >
+            <td
+              className="route-number mr-2"
+            >
+              Blue
+            </td>
+            <td
+              className="route-name"
+            >
+              to Mpls-Target Field
+            </td>
+            <td
+              className="depart-time ml-auto"
+            >
+              <span>
+                2:08
+              </span>
+            </td>
+          </tr>
+          <tr
+            className="departure"
+            style={
+              Object {
+                "display": "table-row",
+              }
+            }
+          >
+            <td
+              className="route-number mr-2"
+            >
+              Blue
+            </td>
+            <td
+              className="route-name"
+            >
+              to Mpls-Target Field
+            </td>
+            <td
+              className="depart-time ml-auto"
+            >
+              <span>
+                2:20
+              </span>
+            </td>
+          </tr>
+          <tr
+            className="departure"
+            style={
+              Object {
+                "display": "table-row",
+              }
+            }
+          >
+            <td
+              className="route-number mr-2"
+            >
+              Blue
+            </td>
+            <td
+              className="route-name"
+            >
+              to Mpls-Target Field
+            </td>
+            <td
+              className="depart-time ml-auto"
+            >
+              <span>
+                2:32
+              </span>
+            </td>
+          </tr>
+          <tr
+            className="departure"
+            style={
+              Object {
+                "display": "table-row",
+              }
+            }
+          >
+            <td
+              className="route-number mr-2"
+            >
+              Blue
+            </td>
+            <td
+              className="route-name"
+            >
+              to Mpls-Target Field
+            </td>
+            <td
+              className="depart-time ml-auto"
+            >
+              <span>
+                2:44
+              </span>
+            </td>
+          </tr>
+          <tr
+            className="departure"
+            style={
+              Object {
+                "display": "table-row",
+              }
+            }
+          >
+            <td
+              className="route-number mr-2"
+            >
+              Blue
+            </td>
+            <td
+              className="route-name"
+            >
+              to Mpls-Target Field
+            </td>
+            <td
+              className="depart-time ml-auto"
+            >
+              <span>
+                2:56
+              </span>
+            </td>
+          </tr>
+          <tr
+            className="departure"
+            style={
+              Object {
+                "display": "table-row",
+              }
+            }
+          >
+            <td
+              className="route-number mr-2"
+            >
+              Blue
+            </td>
+            <td
+              className="route-name"
+            >
+              to Mpls-Target Field
+            </td>
+            <td
+              className="depart-time ml-auto"
+            >
+              <span>
+                3:08
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
